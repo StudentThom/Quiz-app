@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Logged in user.",
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(user);
+                            Intent intent = new Intent(getApplicationContext(), LoggedInActivity.class);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("email", "signInWithEmail:failure", task.getException());
@@ -109,9 +111,5 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 });
-
-        Intent intent = new Intent(this, LoggedInActivity.class);
-        startActivity(intent);
-
     }
 }
