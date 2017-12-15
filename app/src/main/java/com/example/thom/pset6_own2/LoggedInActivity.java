@@ -60,11 +60,4 @@ public class LoggedInActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-    public void goToMain() {
-
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }

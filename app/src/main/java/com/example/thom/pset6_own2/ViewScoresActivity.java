@@ -41,7 +41,6 @@ public class ViewScoresActivity extends AppCompatActivity {
 
                 UserScores userScores = dataSnapshot.child("scores").child("Thom").getValue(UserScores.class);
                 String test = dataSnapshot.child("scores").toString();
-                Log.d("test", test);
 
                 DataSnapshot dataSnapshot1 = dataSnapshot.child("scores");
                 dataSnapshot1.getChildren();
@@ -57,9 +56,6 @@ public class ViewScoresActivity extends AppCompatActivity {
                 ListView listView = findViewById(R.id.list);
                 listView.setAdapter(itemsAdapter);
 
-                TextView textViewData = findViewById(R.id.dataTextView);
-                textViewData.setText(userScores.userMail + " " + userScores.userScore);
-
             }
 
             @Override
@@ -74,30 +70,8 @@ public class ViewScoresActivity extends AppCompatActivity {
         });
 
 
-
     }
 
-    public void getFromDb(View view){
-
-        ValueEventListener postListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // get object from database
-                UserScores userScores = dataSnapshot.child("scores").child("Thom").getValue(UserScores.class);
-                TextView textViewData = findViewById(R.id.dataTextView);
-                textViewData.setText(userScores.userMail + " " + userScores.userMail);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
-                Log.w("TAG", "loadPost:onCancelled", databaseError.toException());
-                // ...
-            }
-        };
-        mDatabase.addValueEventListener(postListener);
-
-    }
 
     public void logOut(View view) {
         FirebaseAuth.getInstance().signOut();
