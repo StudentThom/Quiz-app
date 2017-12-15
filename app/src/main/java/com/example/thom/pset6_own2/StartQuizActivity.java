@@ -43,7 +43,6 @@ public class StartQuizActivity extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         String userscore = extras.getString("userscore");
         String numberOfQuestions = extras.getString("numberOfQuestions");
-        //userscore = intent.getStringExtra("usercore");
 
         // put intent info in textviews
         userscoreTextView.setText(userscore);
@@ -55,11 +54,7 @@ public class StartQuizActivity extends AppCompatActivity {
         String url = "https://opentdb.com/api.php?amount=1&type=boolean";
 
         final TextView questionTextView = findViewById(R.id.questionTextView);
-
         final TextView answerTextView = findViewById(R.id.answerTextView);
-
-        //final TextView mTextView = getListView().findViewById(R.id.textView1);
-
 
 // Request a string response from the provided URL.
         JsonObjectRequest jsObjectRequest = new JsonObjectRequest
@@ -88,7 +83,6 @@ public class StartQuizActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
-                        //mTextView.setText("That didn't work!");
                     }
                 });
 //      Add the request to the RequestQueue.

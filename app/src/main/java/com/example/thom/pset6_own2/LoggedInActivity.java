@@ -21,7 +21,6 @@ public class LoggedInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_logged_in);
 
         mAuth = FirebaseAuth.getInstance();
-        //setListener();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if (currentUser == null){

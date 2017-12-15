@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("create user", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("create user failure", "createUserWithEmail:failure", task.getException());
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(MainActivity.this, "Logged in user.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(user);
+                            // Go to next activity
                             Intent intent = new Intent(getApplicationContext(), LoggedInActivity.class);
                             startActivity(intent);
                         } else {

@@ -56,7 +56,6 @@ public class QuestionFragment extends ListFragment {
 
         final List<String> myArray = new ArrayList<>();
 
-        //final ArrayList<String> myArray = new ArrayList<>();
         final ArrayAdapter<String> adapter =
                 new ArrayAdapter<String>(
                         getActivity(),
@@ -64,10 +63,6 @@ public class QuestionFragment extends ListFragment {
                         myArray);
 
         final String[] correctAnswer = {""};
-
-        //final TextView mTextView = getListView().findViewById(R.id.textView1);
-
-
 
 
 
@@ -83,8 +78,6 @@ public class QuestionFragment extends ListFragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         // Display the first 500 characters of the response string.
-                        //mTextView.setText("Response is: " + response.toString());
-                        //getJSONArray().getJSONObject(); ref: https://stackoverflow.com/questions/32624166/how-to-get-json-array-within-json-object
                         JSONArray jsonArray = new JSONArray();
                         JSONObject question = new JSONObject();
                         try {
@@ -126,9 +119,6 @@ public class QuestionFragment extends ListFragment {
                         Log.d("myarray", myArray.toString());
 
 
-                        //ListView list1 = (ListView) inflaterCategories.findViewById());
-
-                        //ListView listView = getActivity().findViewById(R.id.@android_id/list);
                         setListAdapter(adapter);
 
 
@@ -142,13 +132,8 @@ public class QuestionFragment extends ListFragment {
                         //mTextView.setText("That didn't work!");
                     }
                 });
-// Add the request to the RequestQueue.
-        //MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
+
         queue.add(jsObjectRequest);
-        //this.setListAdapter(adapter);
-
-
-
 
     }
 
