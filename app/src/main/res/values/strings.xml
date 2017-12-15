@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pset6_own2</string>
+    <string name="register">Register</string>
+    <string name="logIn">Log in</string>
+    <string name="logOut">Log out</string>
+    <string name="viewScore">View score</string>
+    <string name="startQuiz">Start quiz</string>
+    <string name="trueAnswer">True</string>
+    <string name="falseAnswer">False</string>
+    <string name="numberOfQuestionsAnswered">Number of questions answered: </string>
+    <string name="yourScore">Your score :</string>
+    <string name="submitScore">Submit score</string>
+    <string name="yourName">Your name</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
